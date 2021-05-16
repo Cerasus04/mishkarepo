@@ -1,0 +1,115 @@
+.benefits {
+  line-height: 20px;
+  font-weight: bold;
+  color: $black;
+  display: grid;
+
+  @media (min-width: $tablet-width) {
+    width: 675px;
+    min-height: 425px;
+    grid-template-columns: 325px 325px;
+    grid-template-rows: repeat(3, min-content);
+    column-gap: 10px;
+    row-gap: 45px;
+    grid-auto-flow: column;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 700px;
+    column-gap: 23px;
+  }
+}
+
+.benefits__item {
+  position: relative;
+  width: 260px;
+  margin-bottom: 30px;
+  padding-top: 57px;
+  padding-right: 30px;
+
+  &::before {
+    position: absolute;
+    width: 55px;
+    height: 37px;
+    top: 0;
+    left: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 295px;
+    font-size: 20px;
+    line-height: 22px;
+    margin: 0;
+  }
+
+  &--flower::before {
+    content: url("../img/icon-feature-flower.svg");
+    left: 8px;
+  }
+
+  &--money {
+    padding-top: 52px;
+
+    &::before {
+      content: url("../img/icon-feature-money.svg");
+      top: -2px;
+    }
+  }
+
+  &--heart {
+    padding-top: 54px;
+
+    &::before {
+      content: url("../img/icon-feature-heart.svg");
+      top: 4px;
+      left: 7px;
+
+      @media (min-width: $tablet-width) {
+        top: 7px;
+        left: 8px;
+      }
+    }
+  }
+
+  &--ball {
+    padding-top: 53px;
+
+    &::before {
+      content: url("../img/icon-feature-ball.svg");
+      left: 2px;
+
+      @media (min-width: $tablet-width) {
+        top: 5px;
+        left: 3px;
+      }
+    }
+
+    @media (min-width: $tablet-width) {
+      padding-top: 57px;
+    }
+  }
+
+  &--rocket {
+    padding-top: 51px;
+
+    &::before {
+      content: url("../img/icon-feature-rocket.svg");
+      left: -5px;
+    }
+  }
+
+  &--gift {
+    padding-top: 55px;
+
+    &::before {
+      content: url("../img/icon-feature-gift.svg");
+      left: 5px;
+      top: 2px;
+
+      @media (min-width: $tablet-width) {
+        top: 2px;
+        left: 2px;
+      }
+    }
+  }
+}

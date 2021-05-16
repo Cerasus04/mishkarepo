@@ -1,0 +1,44 @@
+//Colors
+
+$lightgrey: #444444;
+$lightblue: #63d1bb;
+$borderblue: #62d1ba;
+$light-lightblue: #59d5bc;
+$moderateblue: #56c3b2;
+$light-moderateblue: #46c1ae;
+$bordergrey: #ececec;
+$black: #000000;
+$white: #ffffff;
+$gray: #f1f1f1;
+$background-gray: #fafafa;
+$grey-bottom: #e5e5e5;
+
+//Viewports
+
+$tablet-width: 768px;
+$desktop-width: 1150px;
+$mobile-width: 320px;
+
+
+//Mixin
+
+@mixin ul-reset {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+@mixin title-mobile {
+  font-size: 25px;
+  line-height: 30px;
+}
+
+@mixin title-tablet {
+  font-size: 43px;
+  line-height: 50px;
+}
+
+@mixin title-desktop {
+  font-size: 53px;
+  line-height: 57px;
+}

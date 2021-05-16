@@ -1,0 +1,243 @@
+.contacts {
+  position: relative;
+  width: 320px;
+  margin: 0 auto;
+  margin-bottom: 39px;
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+    margin-bottom: 56px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1150px;
+    margin-bottom: 107px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 320px;
+    height: 6px;
+    background-image: url("../img/bg-zigzag-line.svg");
+    background-repeat: repeat;
+    background-size: contain;
+
+    @media (min-width: $tablet-width) {
+      width: 768px;
+      height: 16px;
+      top: 7px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 1050px;
+      height: 21px;
+      top: 0;
+      left: 50px;
+    }
+  }
+}
+
+.contacts__wrapper {
+  box-sizing: border-box;
+  position: relative;
+  width: 260px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 668px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 47px;
+      height: 81px;
+      top: 68px;
+      right: 3px;
+      background-image: url("../img/icon-flag.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1050px;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding-top: 178px;
+    padding-left: 175px;
+
+    &::after {
+      top: 158px;
+      left: 63px;
+    }
+  }
+}
+
+.contacts__title {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: bold;
+  color: $black;
+  margin: 0;
+  padding: 44px 0 27px;
+
+  @media (min-width: $tablet-width) {
+    @include title-tablet;
+    padding: 92px 0 47px;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include title-desktop;
+    padding: 0;
+    padding-bottom: 34px;
+  }
+}
+
+.contacts__map {
+  position: relative;
+  width: 100%;
+  height: 457px;
+  background: url("../img/map-mobile@1x.jpg") no-repeat;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/map-mobile@2x.jpg");
+    background-size: cover;
+  }
+
+  @media (min-width: $tablet-width) {
+    background: url("../img/map-tablet@1x.jpg") no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/map-tablet@2x.jpg");
+      background-size: cover;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    background: url("../img/map-desktop@1x.jpg") no-repeat;
+    width: 527px;
+    position: absolute;
+    top: 95px;
+    right: 50px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/map-desktop@2x.jpg");
+      background-size: cover;
+    }
+  }
+}
+
+.contacts__iframe {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 457px;
+  border: 0;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 527px;
+    left: 0;
+  }
+}
+
+.contacts__attributes {
+  margin-bottom: 10px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 25px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+  }
+
+  & tr {
+    line-height: 30px;
+    border-bottom: none;
+    text-align: left;
+  }
+
+  & th {
+    padding-bottom: 22px;
+    vertical-align: top;
+  }
+
+  & th:first-of-type {
+    width: 76px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 668px;
+
+    & tbody {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    & tr {
+      font-size: 17px;
+    }
+
+    & th:first-of-type {
+      width: 78px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    width: 320px;
+
+    & tbody {
+      grid-template-columns: 1fr;
+      row-gap: 3px;
+    }
+  }
+}
+
+.contacts__btn {
+  width: 260px;
+  margin: 40px auto;
+  font-size: 18px;
+
+  @media (min-width: $tablet-width) {
+    width: 230px;
+    margin: 0 auto;
+    margin-top: 57px;
+    font-size: 17px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 230px;
+    margin-left: 225px;
+    margin-top: 0;
+  }
+}
+
+.contacts__email {
+  border-bottom: 1px solid $borderblue;
+  padding-bottom: 2px;
+  color: $lightgrey;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    border-bottom: 1px solid $borderblue;
+    color: $light-moderateblue;
+  }
+
+  &:active {
+    border-bottom: 1px solid rgba($borderblue, 0.1);
+    color: $light-moderateblue;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 7px;
+  }
+}

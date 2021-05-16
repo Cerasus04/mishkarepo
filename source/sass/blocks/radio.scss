@@ -1,0 +1,85 @@
+.radio__item {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: 18px;
+  font-weight: bold;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 26px;
+  }
+}
+
+.radio__item label {
+  position: relative;
+  display: block;
+  padding: 12px 30px 12px 60px;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    padding: 20px 30px 12px 80px;
+  }
+}
+
+.radio__item-input + label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 4px;
+
+  width: 41px;
+  height: 41px;
+  box-sizing: border-box;
+
+  border: 2px solid $lightgrey;
+  overflow: hidden;
+  background-color: transparent;
+  border-radius: 50%;
+
+  @media (min-width: $tablet-width) {
+    width: 51px;
+    height: 51px;
+  }
+}
+
+.radio__item-input:checked + label::after {
+  content: "";
+  position: absolute;
+  left: 11px;
+  top: 15px;
+
+  width: 18px;
+  height: 18px;
+
+  background-color: $lightblue;
+  border-radius: 50%;
+
+  @media (min-width: $tablet-width) {
+    left: 18px;
+    top: 20px;
+  }
+}
+
+.radio__item-input:hover + label::before,
+.radio__item-input:focus + label::before {
+  border-color: $lightblue;
+  pointer-events: none;
+}
+
+.radio__item-input:hover + label::after,
+.radio__item-input:focus + label::after,
+.radio__item-input:active + label::after,
+.radio__item-input:checked + label:checked {
+  background-color: $lightblue;
+  pointer-events: none;
+}
+
+.radio__item-input:active + label::before {
+  border-color: $lightgrey;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.radio__item-input:disabled + label::before {
+  border-color: $lightgrey;
+  pointer-events: none;
+}

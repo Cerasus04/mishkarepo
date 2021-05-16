@@ -1,0 +1,83 @@
+.advantages {
+  box-sizing: border-box;
+  width: 320px;
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: 26px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 320px;
+    height: 6px;
+    background-image: url("../img/bg-zigzag-line.svg");
+    background-repeat: repeat;
+    background-size: contain;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+    margin-bottom: 68px;
+
+    &::before {
+      width: 768px;
+      height: 16px;
+      top: -9px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1150px;
+    margin-bottom: 72px;
+
+    &::before {
+      width: 1050px;
+      top: 0;
+      height: 21px;
+      left: 50px;
+    }
+  }
+}
+
+.advantages__wrapper {
+  box-sizing: border-box;
+  width: 260px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 668px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1050px;
+    padding-top: 58px;
+    padding-left: 175px;
+  }
+}
+
+.advantages__title {
+  box-sizing: border-box;
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: bold;
+  color: $black;
+  margin: 0;
+  padding: 37px 0 27px;
+
+  @media (min-width: $tablet-width) {
+    @include title-tablet;
+    width: 660px;
+    padding: 68px 0 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include title-desktop;
+    width: 700px;
+    padding: 35px 10px 40px 0;
+  }
+}
+
+.advantages__list {
+  @include ul-reset;
+  min-width: 260px;
+}

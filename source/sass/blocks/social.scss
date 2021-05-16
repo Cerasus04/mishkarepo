@@ -1,0 +1,33 @@
+.social {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  box-sizing: border-box;
+  padding: 18px 37px 15px 38px;
+
+  @media (min-width: $tablet-width) {
+    justify-content: space-between;
+    width: 180px;
+    padding: 16px 20px 15px;
+    margin: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 210px;
+    padding: 19px 37px 15px 32px;
+  }
+}
+
+.social__link {
+  display: block;
+
+  &:hover svg,
+  &:focus svg {
+    fill: $light-moderateblue;
+  }
+
+  &:active svg {
+    opacity: 0.3;
+  }
+}

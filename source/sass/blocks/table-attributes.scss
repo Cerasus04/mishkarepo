@@ -1,0 +1,33 @@
+.table-attributes {
+  width: 260px;
+  box-sizing: border-box;
+  font-size: 15px;
+  line-height: 20px;
+
+  border-collapse: collapse;
+  border-spacing: 0;
+
+  @media (min-width: $tablet-width) {
+    width: 296px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 291px;
+  }
+}
+
+.table-attributes tr {
+  border-bottom: 1px solid $bordergrey;
+  text-align: left;
+}
+
+.table-attributes th {
+  font-weight: normal;
+  height: 34px;
+  padding: 0;
+  padding-bottom: 5px;
+}
+
+.table-attributes th:first-of-type {
+  width: 97px;
+}

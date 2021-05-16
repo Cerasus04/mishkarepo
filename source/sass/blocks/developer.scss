@@ -1,0 +1,51 @@
+.developer {
+  position: relative;
+  font-size: 19px;
+  line-height: 18px;
+  font-weight: bold;
+  box-sizing: border-box;
+
+  padding: 22px 25px 22px 39px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    padding-left: 9px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 222px;
+    padding: 0;
+    padding-left: 37px;
+  }
+}
+
+.developer__link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  color: $black;
+
+  @media (min-width: $tablet-width) {
+    width: 184px;
+    margin: 0;
+    padding: 0;
+    margin-top: -4px;
+  }
+
+  &:hover .developer__link-icon,
+  &:focus .developer__link-icon {
+    fill: $light-moderateblue;
+  }
+
+  &:active .developer__link-icon {
+    opacity: 0.3;
+  }
+}
+
+.developer__link-icon {
+  width: 100%;
+  margin-left: 28px;
+  border: none;
+  fill: $lightblue;
+}

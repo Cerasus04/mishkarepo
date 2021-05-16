@@ -1,0 +1,87 @@
+.user-list {
+  @include ul-reset;
+  font-weight: bold;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+
+    width: 398px;
+  }
+}
+
+.user-list__item {
+  border-top: 1px solid $bordergrey;
+
+  @media (min-width: $tablet-width) {
+    border-top: none;
+  }
+}
+
+.user-list__link {
+  position: relative;
+  display: block;
+  width: 240px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 27px 10px 28px 36px;
+  text-decoration: none;
+  color: $black;
+
+  &:hover[href] .user-list__text,
+  &:focus[href] .user-list__text {
+    opacity: 0.6;
+  }
+
+  &[href]:active .user-list__text {
+    opacity: 0.3;
+  }
+
+  &[href]:hover .user-list__user-icon,
+  &[href]:focus .user-list__user-icon {
+    fill: $lightblue;
+    opacity: 1;
+  }
+
+  &[href]:active .user-list__user-icon {
+    opacity: 0.3;
+    fill: $lightblue;
+  }
+}
+
+.user-list__link--search {
+  @media (min-width: $tablet-width) {
+    width: 84px;
+    box-sizing: border-box;
+    padding: 44px 40px;
+    border-left: 1px solid $bordergrey;
+  }
+}
+
+.user-list__link--cart {
+  @media (min-width: $tablet-width) {
+    width: 265px;
+    box-sizing: border-box;
+    padding: 34px 0 32px 81px;
+    border-left: 1px solid $bordergrey;
+  }
+}
+
+.user-list__link-text {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.user-list__user-icon {
+  position: absolute;
+  left: -8px;
+  opacity: 0.2;
+
+  @media (min-width: $tablet-width) {
+    top: 36px;
+    left: 33px;
+  }
+}
